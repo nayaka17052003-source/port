@@ -1,0 +1,320 @@
+*{
+    margin:0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.navbar h2{
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 5px;
+}
+ul{
+    display: flex;
+    justify-content: space-between;
+    
+
+}
+li{
+    padding: 13px;
+    list-style-type: none;
+    
+    
+
+}
+a{
+    text-decoration: none;
+    color: blueviolet;
+    border-radius: 10px;
+    
+}
+a:hover{
+    background-color: #0072ff;
+}
+
+body{
+    height:100vh;
+    background: linear-gradient(-45deg,#006cff,#0072ff,#6a11cb,#2575fc);
+    background-size: 400% 400%;
+    animation-name:gradientmove 10s ease infinite;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+@keyframes gradientmove{
+    0%{background-position: 0% 50%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0% 50%;}
+}
+.hero-page{
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+}
+.container{
+    border:1px solid black;
+    border-radius: 200px;
+    border:4px solid rgba(0,255,250,0.3);
+    animation-name:float ;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count:infinite;
+}
+.profile-img{
+    border-radius:200px;
+    transform: translatex(-50);
+    box-shadow: 0px 0px 15px cyan;
+
+
+}
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50%{
+        transform: translatey(-12px);
+    }
+ 
+}
+.hero-left{
+    width: 30vw;
+    border: 1px solid black;
+    border: none;
+}
+.hero-left h1{
+       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+       color:purple;
+       animation-name: mycolor;
+       animation-duration: 2s ;
+       animation-timing-function: linear;
+       animation-iteration-count: infinite;
+}
+
+@keyframes mycolor{
+     0%{ color: 12deg, blue;}
+     25%{color: #6a11cb;}
+     50%{color: color-mix(in srgb, blue 80%, green);}
+     100%{color: deeppink;}
+}
+.about h1{
+    margin-left: 45px;
+}
+.about-info p{
+     width:45vw;
+     padding: 20px;
+     
+}
+.skills-info{
+    display: flex;
+    justify-content: space-around;
+
+}
+.box{
+    border: 1px solid black;
+    height: 35vh;
+    width: 20vw;
+    text-align: center;
+    box-shadow: 0px 0px 15px white;
+    border-radius: 10px;
+    border: none;
+
+}
+.box:hover{
+    transform: scale(1.2,1.2);
+}
+.social{
+    font-size:35px;  
+    margin-left:45px;
+}
+i:hover{
+    color: antiquewhite;
+}
+.skills-info i{
+    font-size: 50px;
+    padding-bottom: 25px;
+    padding-top: 5px;
+}
+
+.skills h1{
+    text-align: center;
+
+}
+.skills-info{
+    padding:45px;
+}
+.cards{
+    display: flex;
+    justify-content: space-around;
+    padding-top:24px;
+    padding-bottom: 15px;
+    
+}
+.box1{
+    border: 1px solid black;
+    border-radius: 10px;
+    height:35vh ;
+    width: 20vw;
+    text-align: center;
+    box-shadow: 0px 0px 15px blue;
+    border: none;
+    transform-style: preserve-3d;
+    transition-duration: 1s;
+}
+.box1:hover{
+    transform: rotateY(180deg);
+}
+.cards i{
+    font-size: 50px;
+    padding-bottom: 15px;
+    padding-top: 8px;
+}
+a{
+    text-decoration: none;
+    color: black;
+    margin-top: 15px;
+}
+.projects h1{
+    text-align: center;
+}
+.contact{
+    text-align: center;
+}
+form{
+     border: 1px solid black;
+     height: 50vh;
+     width: 25vw;
+     margin-left: 460px;
+     border-radius: 10px;
+     box-shadow: 0px 0px 15px #33ff33;
+     border: none;
+     margin-top: 15px;
+    
+    }
+input{
+    margin: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    border-bottom: #6a11cb;
+    border: none;
+}
+textarea{
+    padding: 5px;
+    border-radius: 10px;
+
+}
+
+button{
+    margin: 10px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    padding: 5px;
+    background-color: chartreuse;
+}
+input:hover{
+    background-color: aqua;
+
+}
+button:hover{
+     background-color:sandybrown;
+}
+  #typing{
+    font-size: 2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #4cc9f0;
+    width: 0;
+    animation: typing 4s steps(30,end) forwards,
+               blink 0.7s infinite;
+  }
+
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 18ch; }
+  }
+
+  @keyframes blink {
+    50% { border-color: transparent; }
+  }
+  footer{
+    text-align: center;
+    margin: 25px;
+  }
+/* --- Hamburger basics --- */
+#nav-toggle { display: none; }
+
+.nav-toggle-label {
+  display: none; /* show only on small screens */
+  cursor: pointer;
+  padding: 8px;
+}
+.nav-toggle-label span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background: #4b4b4b;
+  margin: 5px 0;
+  border-radius: 3px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* Transform into X when checked */
+#nav-toggle:checked ~ .nav-toggle-label span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+#nav-toggle:checked ~ .nav-toggle-label span:nth-child(2) {
+  opacity: 0;
+}
+#nav-toggle:checked ~ .nav-toggle-label span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* --- Responsive nav --- */
+@media (max-width: 768px) {
+  .navbar { align-items: center; gap: 8px; position: relative; padding: 6px 12px; }
+  .nav-toggle-label { display: block; margin-left: auto; }
+
+  nav {
+    position: absolute;
+    right: 12px;
+    top: 58px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    width: 200px;
+  }
+  nav ul {
+    display: none;
+    flex-direction: column;
+    padding: 6px 0;
+  }
+  nav ul li { padding: 10px 16px; }
+  nav ul li + li { border-top: 1px solid rgba(0,0,0,0.06); }
+
+  /* Show menu when checkbox is checked (CSS-only) */
+  #nav-toggle:checked ~ nav ul { display: flex; }
+
+  /* Layout changes for the page */
+  .hero-page { flex-direction: column; align-items: center; padding: 24px; gap: 18px; }
+  .hero-left { width: 100%; border: none; text-align: center; }
+  .container { margin-top: 10px; }
+  .profile-img { width: 140px; height: 140px; object-fit: cover; }
+
+  .about-info p { width: 100%; padding: 12px; }
+  .skills-info { flex-direction: column; gap: 16px; padding: 24px; }
+  .box, .box1 { width: 90%; max-width: 380px; transform: none; }
+  .cards { flex-direction: column; align-items: center; padding-bottom: 0; }
+
+  form { width: 90%; margin: 20px auto; }
+}
+
+/* Further compact tweak for small phones */
+@media (max-width: 480px) {
+  .nav-toggle-label span { width: 22px; }
+  h1 { font-size: 1.4rem; }
+  #typing { font-size: 1.1rem; }
+  .profile-img { width: 120px; height: 120px; }
+}
